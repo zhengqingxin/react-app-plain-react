@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route,Switch } from 'react-router-dom';
 import Layout from 'components/Layout';
-import Product from './product';
+import Project from './project';
 
 class App extends Component {
   state = {
@@ -19,7 +19,7 @@ class App extends Component {
       <Layout>
         <Switch>
           <Route exact path={`/`} component={()=>{return '121343'}}/>                
-          <Route path={`/product`} component={Product}/>
+          <Route path={`/project`} component={Project}/>
         </Switch>
       </Layout>
     );

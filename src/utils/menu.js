@@ -5,8 +5,8 @@ module.exports = [
     url:'/'
   },
   {
-    name:'项目管理',
+    name:'项目',
     icon:'dot-chart',
-    url:'/product'
+    url:'/project'
   }
 ]

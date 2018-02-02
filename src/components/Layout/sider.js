@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Layout, Menu, Icon,Dropdown } from 'antd';
+import { Layout, Menu, Icon } from 'antd';
 import config from 'utils/config';
 import menu from 'utils/menu';
 import styles from './index.module.scss';
@@ -25,7 +25,7 @@ const sider = ({collapsed})=>{
                 <Link to={m.url}>
                   <Icon type={m.icon} />              
                   <span>{m.name}</span>
-                </Link>                  
+                </Link>
               </Menu.Item>
             )
           })
