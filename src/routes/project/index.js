@@ -5,7 +5,6 @@ import {Table,Spin,AutoComplete,Input} from 'antd';
 const Search = Input.Search;
 const LS_LOCAL_USER_KEY = 'LOCAL_USERS';
 const LOCAL_USER = JSON.parse(localStorage.getItem(LS_LOCAL_USER_KEY)) || [];
-console.log(JSON.parse(localStorage.getItem(LS_LOCAL_USER_KEY)))
 class Project extends Component {
   
   state = {
@@ -62,7 +61,6 @@ class Project extends Component {
   }
 
   async load(){
-    console.log(this.state.criteria.user)
     if(!this.state.criteria.user){
       return;
     }
@@ -75,6 +73,9 @@ class Project extends Component {
   }
 
   handleSearch(val){
+    if(!val){
+      return;
+    }
     const criteria = Object.assign({},this.state.criteria,{user:val});
     this.setState({criteria},this.load);
     if(this.state.localUsers.indexOf(val) === -1){

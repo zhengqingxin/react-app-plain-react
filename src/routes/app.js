@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <Layout>
         <Switch>
-          <Route exact path={`/`} component={()=>{return '121343'}}/>                
+          <Route exact path={`/`} component={()=>{return 'plain react + css module'}}/>                
           <Route path={`/project`} component={Project}/>
         </Switch>
       </Layout>
